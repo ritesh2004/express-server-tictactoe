@@ -38,8 +38,8 @@ io.on('connection',(socket)=>{
 })
 })
 
-const PORT = 3001
+const PORT = process.env.PORT || 3001
 
 server.listen(PORT,()=>{
-    console.log(`SERVER IS RUNNING ON PORT ${PORT}`)
+    console.log(`SERVER IS RUNNING ON PORT ${server.address().port}`)
 })
